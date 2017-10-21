@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#include<stdio.h>
+
+float Sqrt(float num)
+{
+    float mod=1;
+    float c=0;
+    for(int d=0; d<50; c+=mod, d++)
+    if(c*c>num)
+    {
+        c-=mod;
+        mod/=10;
+    }
+
+    return c;
+}
+int main()
+{
+    float num;
+    scanf("%f", & num);
+
+    printf("%f", Sqrt(num));
+
+
+
+
+    return 0;
+}
