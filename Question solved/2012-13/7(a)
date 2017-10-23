@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main ()
+{
+    char ch;
+    scanf("%c", &ch);
+    if(islower(ch))printf("%c is lower case\n", ch);
+    if(toupper(ch))printf("Convert lowercase letter to uppercase %c\n", ch);
+    if(tolower(ch))printf("Convert uppercase letter to lowercase %c", ch);
+
+    return 0;
+}
