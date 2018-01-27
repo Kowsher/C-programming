@@ -1,0 +1,27 @@
+#include<stdio.h>
+double Bisecetion(int a, int b)
+{
+    double up=(double)b,low=(double)a,mid=(up+low)/2,vl;
+    for(int i=0; i<1000; i++)
+    {
+        mid=(up+low)/2;
+        vl=mid*mid*mid-mid-1;
+        if(vl<0)low=mid;
+        else up=mid;
+
+        if(abs(vl-0.0001)<=0.001){
+            return mid;
+        }
+
+    }
+    return mid;
+
+}
+int main()
+{
+     int a=1,b=2;
+        double vl=Bisecetion(a,b);
+        printf("%f", vl);
+
+    return 0;
+}
