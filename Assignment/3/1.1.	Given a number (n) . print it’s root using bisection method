@@ -1,0 +1,25 @@
+#include<stdio.h>
+double Bisecetion(int n)
+{
+    double up=(double)n,low=0.0,mid,ck=(double)n;
+    for(int i=0; i<100000; i++){
+        mid=(up+low)/2;
+        if(mid*mid>n)up=mid;
+        else low=mid;
+
+        if(mid*mid-ck==0){
+            return mid;
+            break;
+        }
+         //cout<<mid-up<<" "<<mid<<" "<<up<<endl;
+    }
+    return mid;
+}
+int main()
+{
+     int n;
+     printf("Input the number to get of its squrt root ");
+     scanf("%d", &n);
+     printf("%f",Bisecetion(n));
+    return 0;
+}
