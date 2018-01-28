@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+#define f(x) x*x*x-3*x+1
+void False(float a, float b)
+{
+    float c=1e5,current_vl, previous_vl=0;
+    while(c>0.00001)
+    {
+        float a1=f(a),b1=f(b);
+        current_vl= (a*b1-b*a1)/(b1-a1);
+        if(f(current_vl)<0)a=current_vl;
+        else b=current_vl;
+        c=fabs(current_vl-previous_vl);
+        previous_vl=current_vl;
+    }
+   printf("The approx root is %f ", current_vl);
+}
+int main()
+{
+    float a=1, b=2;
+    False(a,b);
+
+}
