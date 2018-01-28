@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+
+void Newton_Rapshon_method(float x)
+{
+    float c=1e5,current_vl,j=1, previous_vl=0.0;
+    while(c>0.00000001)
+    {
+        current_vl=(x*sin(x)+cos(x)+1)/(3+sin(x));
+        c=fabs(current_vl-previous_vl);
+        previous_vl=current_vl;
+    }
+     printf("The approx root is %f ", current_vl);
+}
+int main()
+{
+    float x;
+    printf("the initial guess: ");
+    scanf("%f", &x);
+    Newton_Rapshon_method(x);
+}
