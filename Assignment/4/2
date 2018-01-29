@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+
+#define f(x) log(x);
+
+float Simpson_1_3(float fun[], float h, int n)
+{
+    float sum=0;
+    for(int i=0; i<=n; i++)
+    {
+        if(i==0 || i==n)sum+=fun[i];
+        else if(i%2==1)sum+=4*fun[i];
+        else sum+=2*fun[i];
+    }
+
+    return (h/3)*sum;
+}
+
+int main()
+{
+   float h,a=4, b=5.2,fun[7],x;
+   h=(b-a)/6;
+
+   for(int i=0; i<=6; i++)
+   {
+       x=a+i*h;
+       fun[i]=f(x);
+   }
+   printf("the output: %f", Simpson_1_3(fun, h,6));
+
+}
