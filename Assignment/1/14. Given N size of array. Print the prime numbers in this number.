@@ -1,5 +1,5 @@
 #include<stdio.h>
-main()
+ main()
 {
    int n,m;
    scanf("%d", &n);
@@ -16,9 +16,8 @@ main()
                 break;
             }
         }
-         if(flag==0 && arr[i]!=1)printf("%d ",arr[i]);
+         if(!flag && arr[i]!=1)printf("%d ",arr[i]);
    }
 
     return 0;
 }
-
