@@ -1,0 +1,12 @@
+#include<stdio.h>
+main()
+{
+   int n;
+   scanf("%d", &n);
+    if(n==1 || n<0){puts("No");exit(0);}
+    for (int j = 2; j <=n/2; j++){if ((n % j) == 0){puts("No");exit(0);}}
+    puts("Yes");
+
+    return 0;
+}
+
