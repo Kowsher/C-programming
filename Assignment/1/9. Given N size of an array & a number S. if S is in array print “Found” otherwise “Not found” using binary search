@@ -1,0 +1,30 @@
+#include<stdio.h>
+int arr[100000005];
+int Search;
+int BinarSearch(int start, int End)
+{
+    int mid=(start+End)/2;
+    if(arr[mid]==Search){return mid;}
+    if(start==End ) return 0;
+    if(Search<arr[mid]){End=mid-1;}
+    else {start=mid+1;}
+    BinarSearch(start,End);
+}
+int compare(const void *a, const void *b) {
+    return (*(int *)a > *(int *)b) - (*(int *)a < *(int *)b);
+}
+
+void ssort(int *arr, size_t len) {
+    qsort(arr, len, sizeof(int), compare);
+}
+int main()
+{
+    int n; scanf("%d", &n);
+    for(int i = 0; i < n; i++)scanf("%d", &arr[i]);
+    ssort(arr,n);
+    scanf("%d", &Search);
+    int start=0,End=n-1;
+    BinarSearch(start,End)?puts("Found"):puts("Not found");
+    return 0;
+}
+
