@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+	int n, i, val, pro=1;
+	scanf("%d",&n);
+	for(i=0; i<n; i++)
+	{
+		scanf("%d",&val);
+		pro=pro*val;
+	}
+	float g_mean=pow(pro,(float)1/n);
+	printf("Geometric Mean = %f",g_mean);
+
+}
