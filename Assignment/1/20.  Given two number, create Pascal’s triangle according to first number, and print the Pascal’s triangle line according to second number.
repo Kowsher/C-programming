@@ -1,0 +1,25 @@
+#include <stdio.h>
+ #define mx 100
+int arr[mx][mx];
+int main()
+{
+    int n,vl,i, a, j,m;
+    scanf("%d %d", &n, &a);
+
+    for(int i=0; i<n; i++)
+    {
+        for (int j=0; j<=i; j++)
+        {
+            if(j==0 || j==i)vl=1;
+            else
+            {
+                vl=arr[i-1][j]+arr[i-1][j-1];
+            }
+            arr[i][j]=vl;
+            if(i+1==a)m=i;
+        }
+    }
+    for(j=0; j<m+1; j++)printf("%d ", arr[a-1][j]);
+
+}
+
