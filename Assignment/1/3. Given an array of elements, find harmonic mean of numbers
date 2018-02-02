@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+	int n, i; float val, sum=0;
+	scanf("%d",&n);
+	for(i=0; i<n; i++)
+	{
+		scanf("%f",&val);
+		sum=sum+1/val;
+	}
+	float h_mean=n/sum;
+	printf("Harmonic Mean = %f",h_mean);
+
+}
