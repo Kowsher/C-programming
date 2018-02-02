@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+	int n, i, val, sum=0;
+	scanf("%d",&n);
+	for(i=0; i<n; i++)
+	{
+		scanf("%d",&val);
+		sum=sum+val;
+	}
+	float armean=sum/n;
+	printf("Arithmetic Mean = %f",armean);
+
+}
