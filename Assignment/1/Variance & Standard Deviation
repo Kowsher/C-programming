@@ -2,20 +2,16 @@
 #include <math.h>
 
 
- main()
+main()
 {
-
     int  i, n;
-    float average, variance, sum = 0, sum1 = 0;
+    float average, variance,  sum = 0, sum1 = 0;
 
-    printf("Enter the value of N \n");
+    printf("Enter the value of N  & values \n");
     scanf("%d", &n);
     float x[n];
-    printf("Enter %d real numbers \n", n);
 
-    for (i = 0; i < n; i++)scanf("%f", &x[i]);
-
-    for (i = 0; i < n; i++)sum = sum + x[i];
+    for (i = 0; i < n; i++){scanf("%f", &x[i]);sum = sum + x[i];}
 
     average = sum / (float)n;
 
@@ -23,6 +19,6 @@
 
     variance = sum1 / (float)n;
 
-    printf("variance of all elements = %.2f\n", variance);
-    printf("Standard deviation = %.2f\n", sqrt(variance));
+    printf("variance & st deviation of all elements  %.2f & %.2f\n\n", variance, sqrt(variance));
+
 }
