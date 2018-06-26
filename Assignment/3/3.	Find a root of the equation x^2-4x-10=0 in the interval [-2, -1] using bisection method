@@ -1,0 +1,20 @@
+#include<stdio.h>
+#define f(x) x*x-4*x-10
+
+void Bisection(double low, double up)
+{
+    double mid;
+    while((up-low)>0.001){
+        mid=(up+low)/2;
+        if(f(mid)<0)up=mid;
+        else low=mid;
+
+    }
+    printf("%lf", mid);
+}
+
+int main()
+{
+    double low=-2,up=-1;
+    Bisection(low, up);
+}
