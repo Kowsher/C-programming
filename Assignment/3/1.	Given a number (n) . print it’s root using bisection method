@@ -6,12 +6,7 @@ double Bisecetion(int n)
         mid=(up+low)/2;
         if(mid*mid>n)up=mid;
         else low=mid;
-
-        if(mid*mid-ck==0){
-            return mid;
-            break;
-        }
-         //cout<<mid-up<<" "<<mid<<" "<<up<<endl;
+        if(mid*mid-ck==0)return mid;
     }
     return mid;
 }
