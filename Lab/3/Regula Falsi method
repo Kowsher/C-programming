@@ -1,0 +1,24 @@
+#include<stdio.h>
+#define func(x) (x*x*x-3*x-5)
+
+void False_Method(double a, double b, double c)
+{
+    double x= (a*func(b)-b*func(a))/(func(b)-func(a));
+
+    if(fabs(x-c)<0.001)
+    {
+        printf("%lf", x);
+        return;
+    }
+
+    if(func(x)>0)a=x;
+    else b=x;
+    c=x;
+    False_Method(a,b,c);
+
+}
+ main()
+{
+    False_Method(2.0, 3.0, 100.0);
+}
+
