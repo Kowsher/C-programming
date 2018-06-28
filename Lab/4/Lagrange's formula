@@ -1,0 +1,20 @@
+#include<stdio.h>
+double x[100], y[100], sum=0.0,x_vl;
+
+double Call(int j, int n)
+{
+    double multi=1.0;
+    for(int i=0; i<n; i++){
+        if(i!=j)multi*=(x_vl-x[i])/(x[j]-x[i]);
+    }
+    return multi;
+}
+ main()
+{
+    int n, i, j;
+    scanf("%d", &n);
+    for(i=0; i<n; i++)scanf("%lf %lf", &x[i], &y[i]);
+    scanf("%lf", &x_vl);
+    for(i=0; i<n; i++)sum+=y[i]*Call(i, n);
+    printf("%lf\n", sum);
+}
