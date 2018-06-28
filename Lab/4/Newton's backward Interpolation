@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+double U_call(double u, int i)
+{
+    double c=u;
+    for(int j=1; j<i; j++)c*=(u+j);
+    return c;
+}
+
+int Fact(int i)
+{
+    int fact=1;
+    for(int j=1; j<=i; j++)fact*=j;
+    return fact;
+}
+
+int main()
+{
+    int n, i,j,vl; double x[100], y[100][100], u, sum;
+    scanf("%d", &n);
+    for(i=0; i<n; i++)scanf("%lf %lf", &x[i], &y[i][0]);
+    scanf("%d", &vl);
+
+   for(i=1; i<n; i++){
+       for(j=0; j<(n-i); j++)y[j][i]=y[j+1][i-1]-y[j][i-1];
+   }
+   u=(vl-x[n-1])/(x[1]-x[0]);
+  sum=y[--n][0];
+   for(i=1; i<n; i++)sum+=(U_call(u, i)/(double)Fact(i))*y[--n][i];
+
+ printf("%lf\n", sum);
+
+}
