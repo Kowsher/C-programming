@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+main()
+{
+    int r1,r2,c1,c2, first[100][100], second[100][100], i, j,sum,k;
+    scanf("%d %d", &r1, &c1);
+    for(i=0; i<r1; i++){
+        for(j=0; j<c1; j++)scanf("%d", &first[i][j]);
+    }
+    scanf("%d %d", &r2, &c2);
+    for(i=0; i<r2; i++){
+        for(j=0; j<c2; j++)scanf("%d", &second[i][j]);
+    }
+
+    for(i=0; i<r1; i++){
+        for(j=0; j<c2; j++){
+            sum=0;
+            for(k=0; k<r2; k++)sum+=first[i][k]*second[k][j];
+            printf("%d ", sum);
+        }
+        printf("\n");
+    }
+}
