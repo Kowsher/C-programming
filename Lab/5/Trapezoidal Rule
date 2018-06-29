@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define func(x) (log(x))
+int main()
+{
+    double a=4, b=5.2,h, sum=0, n=2,vl;
+    h=(b-a)/n;
+    for(int i=0; i<=n; i++)
+    {
+        vl= func(a+i*h);
+        if(i==0 || i==n)sum+=vl;
+        else sum+=2*vl;
+    }
+    sum*=(h/2);
+    printf("%lf", sum);
+}
