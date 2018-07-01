@@ -3,7 +3,7 @@
 
 int main()
 {
-    double low=0, up=1, n=100,x;
+    double low=1, up=0, n=100,x;
     while(n--){
         x= (low*func(up)-up*func(low))/(func(up)-func(low));
         if(func(x)>0)up=x;
