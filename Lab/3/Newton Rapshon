@@ -1,0 +1,10 @@
+#include<stdio.h>
+#define func(x) (2.0*x*x*x-3.0*x-6.0)
+#define func_de(x) (6.0*x*x-3)
+
+int main()
+{
+    double low=1, up=2, n=100,x=1.5;
+    while(n--)x=x-(func(x)/func_de(x));
+    printf("%lf\n", x);
+}
