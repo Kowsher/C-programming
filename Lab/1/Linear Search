@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int n, arr[100],i, vl;
+    scanf("%d %d", &n, &vl);
+    for(i=0; i<n; i++)scanf("%d", &arr[i]);
+    if(find(arr, arr+n, vl)!=arr+n)puts("Yes");
+    else puts("No");
+
+
+}
