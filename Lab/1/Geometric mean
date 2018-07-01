@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int n, pro=1,vl,i;
+    scanf("%d", &n);
+    for(i=0; i<n; i++){
+        scanf("%d", &vl);
+        pro*=vl;
+    }
+    printf("%lf",pow(pro,1.0/n));
+}
