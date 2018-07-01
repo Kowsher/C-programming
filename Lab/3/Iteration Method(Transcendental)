@@ -2,7 +2,7 @@
 #define func(x) exp(x)/3
 int main()
 {
-    double x=0.6, ck[100], error=0.001;int i=1, n=100;
+    double x=0.6, ck[100];int i=1, n=100;
     ck[0]=func(x);
     while(n--){
         ck[i]=func(ck[i-1]);
