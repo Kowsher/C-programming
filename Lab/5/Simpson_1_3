@@ -2,8 +2,7 @@
 #define func(x) (1/(1+x*x))
 int main()
 {
-    double a=0, b=1,h, sum=0, n=6,vl;
-    h=(b-a)/n;
+    double a=0, b=1,h=(1.0/6.0), sum=0, n=6,vl;
     for(int i=0; i<=n; i++)
     {
         vl= func(a+i*h);
@@ -11,6 +10,5 @@ int main()
         else if (i%2==1)sum+=4*vl;
         else sum+=2*vl;
     }
-    sum*=(h/3);
-    printf("%lf", sum);
+    printf("%lf",(h/3.0)* sum);
 }
