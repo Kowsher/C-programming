@@ -1,0 +1,12 @@
+#include<stdio.h>
+#define func(x) (x*3.0-cos(x)-1)
+
+int main()
+{
+    double  n=5,x1=1, x0=0,x2;
+    while(n--){
+            x2=x1-((func(x1)*(x1-x0))/(func(x1)-func(x0)));
+            x0=x1,x1=x2;
+    }
+    printf("%lf\n", x2);
+}
