@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    int n,i; double sum=0, vl;
+    scanf("%d", &n);
+    for(i=0; i<n; i++){
+        scanf("%lf", &vl);
+        sum+=(1/vl);
+    }
+    printf("%lf",n/sum);
+}
