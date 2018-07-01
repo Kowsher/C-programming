@@ -1,0 +1,7 @@
+#include<stdio.h>
+
+int main()
+{
+    double n=2;
+    printf("%lf", sqrt(n));
+}
