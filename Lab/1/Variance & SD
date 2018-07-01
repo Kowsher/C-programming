@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n,i; double sum=0,  var=0, x[100];
+    scanf("%d", &n);
+    for(i=0; i<n; i++){
+        scanf("%lf", &x[i]);
+        sum+=x[i];
+    }
+    sum=sum/n;
+    for(i=0; i<n; i++){
+        var+=(x[i]-sum)*(x[i]-sum);
+    }
+    var/=n;
+    printf("Var = %lf\n",var);
+    printf("SD = %lf\n",sqrt(var));
+}
