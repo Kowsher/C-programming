@@ -3,7 +3,7 @@
 
 int main()
 {
-    double low=1, up=2, mid=2, n=100;
+    double low=1, up=2, mid, n=100;
     while(n--){
         mid=(up+low)/2.0;
         if(func(mid)>0)up=mid;
