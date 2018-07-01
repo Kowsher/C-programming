@@ -1,0 +1,13 @@
+#include<stdio.h>
+#define func(x) 1.0/sqrt(1+x)
+
+int main()
+{
+    double x=0.7, ck[100];int i=1, n=100;
+    ck[0]=func(x);
+    while(n--){
+        ck[i]=func(ck[i-1]);
+        i++;
+    }
+    printf("%lf ", ck[i-1]);
+}
