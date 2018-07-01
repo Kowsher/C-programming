@@ -4,7 +4,7 @@
 
 int main()
 {
-    double low=1, up=2, n=100,x=1.5;
+    double  n=100,x=1.5;
     while(n--)x=x-(func(x)/func_de(x));
     printf("%lf\n", x);
 }
