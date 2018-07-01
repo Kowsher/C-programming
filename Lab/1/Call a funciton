@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+void func()
+{
+    char str[]="applied mathematics";
+    puts(str);
+}
+int main()
+{
+    func();
+}
