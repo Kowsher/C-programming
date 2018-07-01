@@ -1,0 +1,13 @@
+#include<stdio.h>
+#define func(x) x*x*x-x-1
+
+int main()
+{
+    double low=1, up=2, mid=2, n=100;
+    while(n--){
+        mid=(up+low)/2.0;
+        if(func(mid)>0)up=mid;
+        else low=mid;
+    }
+    printf("%.2lf\n", mid);
+}
